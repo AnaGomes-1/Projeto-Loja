@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/funcoes.js"></script>
+
+
+</head>
+    <body>
+
+        <div class="container">
+
+            <h1> <i id="cifrao" class="bi bi-currency-dollar"></i> Loja da Unidade </h1>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr> <!--Linha--> 
+                        <th>Imagem</th> <!--Coluna numa head dentro de uma tabela-->
+                        <th>Produto</th>
+                        <th>Preço Unitário</th>
+                        <th>Qtd</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="img/produto_1.webp" alt="Produto 1" width="150">        
+                        </td>
+                        <td>
+                            <div>Celular Xiaomi</div>
+                            <div><span class="produto-item">Código:</span> 123456</div>
+                            <div><span class="produto-item"> Cor: </span> Cinza Escuro </div>
+                            
+                        </td>
+                        <td id="valor_1"> R$ 1.000</td>
+                        <td>
+                            <span class="badge bg-danger" onclick="alterarQtd(1, `-`)"><i class="bi bi-dash"></i></span>
+                            <span id="qtd_1">0</span>
+                            <span class="badge bg-success"><i class="bi bi-plus" onclick="alterarQtd(1, `+`)"></i></span>
+                        </td>
+                        <td id="total_1">0</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/produto_2.webp" alt="Produto 2" width="180">        
+                        </td>
+                        <td>
+                            <div>Notebook AlienWare</div>
+                            <div><span class="produto-item">Código:</span> 789456</div>
+                            <div><span class="produto-item"> Cor: </span> Cinza Claro </div>
+                            
+                        </td>
+                        <td id="valor_2">R$ 2.000</td>
+                        <td>
+                            <span class="badge bg-danger" onclick="alterarQtd(2, `-`)"><i class="bi bi-dash"></i></span>
+                            <span id="qtd_2">0</span>
+                            <span class="badge bg-success" onclick="alterarQtd(2, `+`)"><i class="bi bi-plus"></i></span>
+                        </td>
+                        <td id="total_2">0</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/produto_3.webp" alt="Produto 3" width="200">        
+                        </td>
+                        <td>
+                            <div>Televisão</div>
+                            <div><span class="produto-item">Código:</span> 654321</div>
+                            <div><span class="produto-item"> Cor: </span> Preta </div>
+                            
+                        </td>
+                        <td id="valor_3">R$ 3.000</td>
+                        <td>
+                            <span class="badge bg-danger" onclick="alterarQtd(3,`-`)"><i class="bi bi-dash"></i></span>
+                            <span id="qtd_3">0</span>
+                            <span class="badge bg-success"onclick="alterarQtd(3,`+`)"><i class="bi bi-plus"></i></span>
+                        </td>
+                        <td id="total_3">0</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+            <footer class="text-center">
+                <span> <i class="bi bi-cart"></i>
+                    Subtotal: <span id="subtotal">R$ 0</span></span>
+            </footer>
+
+        </div>
+    
+    </body>
+</html>
